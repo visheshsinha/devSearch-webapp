@@ -1,1 +1,5 @@
 devSearch/env
+devSearch/devSearch/__pycache__
+devSearch/projects/__pycache__
+devSearch/db.sqlite3
+devSearch/projects/migrations/__pycache__
