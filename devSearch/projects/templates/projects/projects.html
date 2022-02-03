@@ -6,6 +6,26 @@
     Projects
 </h1>
 
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for project in projects %}
+        <tr>
+            <td>{{project.id}}</td>
+            <td>{{project.title}} {% if project.top_rated %} <strong> TOP RATED </strong> {% endif %}</td>
+            <td>{{project.description}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 <p>
     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
     literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
