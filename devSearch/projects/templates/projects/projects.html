@@ -19,7 +19,7 @@
         {% for project in projects %}
         <tr>
             <td>{{project.id}}</td>
-            <td>{{project.title}} {% if project.top_rated %} <strong> TOP RATED </strong> {% endif %}</td>
+            <td><a href="{% url 'project' project.id %}">{{project.title}} </a> {% if project.top_rated %} <strong> TOP RATED </strong> {% endif %}</td>
             <td>{{project.description}}</td>
         </tr>
         {% endfor %}
