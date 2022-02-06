@@ -15,6 +15,7 @@ class Project(models.Model):
     voteRatio = models.IntegerField(default=0, null=True, blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
     id = models.UUIDField(
         default=uuid.uuid4, unique=True, primary_key=True, editable=False
     )
@@ -34,6 +35,7 @@ class Review(models.Model):
     body = models.TextField(max_length=1000, null=True, blank=True)
     value = models.CharField(max_length=100, choices=VOTE_TYPE)
     created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
     id = models.UUIDField(
         default=uuid.uuid4, unique=True, primary_key=True, editable=False
     )
