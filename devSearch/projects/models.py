@@ -29,7 +29,7 @@ class Review(models.Model):
     # owner =
 
     project = models.ForeignKey(
-        Project, on_delete=models.CASCADE
+        Project, on_delete=models.CASCADE, null=True, blank=True
     )  # deletes all reviews if Project is deleted / set NULL if reviews should remain untouched
 
     body = models.TextField(max_length=1000, null=True, blank=True)
