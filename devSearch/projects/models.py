@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 import uuid
 
@@ -7,6 +8,9 @@ import uuid
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=1000, null=True, blank=True)
+
+    featured_image = models.ImageField(null=True, blank=True, default="default_project.jpg")
+
     demo_hyperlink = models.CharField(max_length=1000, null=True, blank=True, unique=True)
     source_code = models.CharField(max_length=1000, null=True, blank=True, unique=True)
 
