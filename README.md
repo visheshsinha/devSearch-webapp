@@ -12,4 +12,4 @@
 * Working on Django REST Framework
 
 # Projects Page
-<img src="./devSearch/static/images/homepage_projects.jpg">  
+![s1](https://github.com/visheshsinha/devSearch-webapp/blob/master/devSearch/static/images/homepage_projects.JPG)
